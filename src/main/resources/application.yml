@@ -1,0 +1,17 @@
+spring:
+  liquibase:
+    enabled: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ${dbUser}
+    password: ${dbSecret}
+    url: jdbc:postgresql://ec2-34-242-84-130.eu-west-1.compute.amazonaws.com:5432/d9ajqqvhsokiq
+    platform: postgres
+    initialization-mode: always
+    continue-on-error: true
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    database: postgresql
